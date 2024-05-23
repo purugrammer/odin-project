@@ -1,2 +1,2 @@
 # odin-project
- all the projects i made ontheodinproject
+ all the projects i made on theodinproject
