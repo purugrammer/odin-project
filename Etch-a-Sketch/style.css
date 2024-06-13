@@ -1,0 +1,13 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+}
+
+divs {
+    margin: 40px;
+
+}
+
