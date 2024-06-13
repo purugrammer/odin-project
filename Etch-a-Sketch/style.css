@@ -4,10 +4,16 @@
     flex-direction: row;
     justify-self: center;
     align-items: center;
+    width: 600px;
+    height: 500px;
+    border: 1px solid black; 
+
 }
 
-divs {
-    margin: 40px;
+.grid-item{
+    width: calc(600px / 16); 
+    height: calc(500px / 16);
+    border: 1px solid black;
 
 }
 
