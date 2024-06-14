@@ -32,7 +32,7 @@ button.addEventListener('click', () => { createNewGrid()
 
 function createNewGrid() {
 const container = document.querySelector("#container");
-let num = prompt("Enter the number of Grid Elements (up to 100")
+let num = prompt("Enter the number of Grid Elements (up to 100)")
 
 
 num = parseInt(num);
