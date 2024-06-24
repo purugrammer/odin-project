@@ -1,19 +1,20 @@
-function add(a,b) {
-    a = parseInt(a)
-    b = parseInt(b)
-    return a + b
+function add(a, b) {
+    return (parseFloat(a) + parseFloat(b)).toFixed(2);
 }
 
-function subtract(a,b) {
-    return a - b
+function subtract(a, b) {
+    return (parseFloat(a) - parseFloat(b)).toFixed(2);
 }
 
-function multiply(a,b) {
-    return a * b
+function multiply(a, b) {
+    return (parseFloat(a) * parseFloat(b)).toFixed(2);
 }
 
-function divide(a,b) {
-    return a / b
+function divide(a, b) {
+    if (b === '0') {
+        return 'bruh';
+    }
+    return (parseFloat(a) / parseFloat(b)).toFixed(2);
 }
 
 let firstOperand, secondOperand, operator;
@@ -56,7 +57,18 @@ operatorButtons.forEach(button => {
     button.addEventListener('click', () => {
     firstOperand = displayValue 
     console.log(firstOperand)
-    operator = button.textContent
+    if (button.textContent==='x')
+        {
+            operator = '*'
+        }
+    else if (button.textContent==='÷')
+        {
+            operator = '/'
+        }
+        else
+        {
+            operator = button.textContent
+        }
     console.log(operator)
     const buttonValue = button.textContent
     displayValue += buttonValue; 
@@ -68,11 +80,21 @@ operatorButtons.forEach(button => {
 const equalsButton = document.querySelector(".equals");
 
 equalsButton.addEventListener('click', () => {
-    secondOperand = displayValue
-    console.log(secondOperand)
-    displayValue = operate(firstOperand, secondOperand, operator)
+    if (!firstOperand || !operator || displayValue === '') {
+        // If any necessary part is missing, do nothing or display an error
+        displayValue = 'Error';
+    } else {
+        secondOperand = displayValue;
+        console.log(secondOperand);
+        displayValue = operate(firstOperand, secondOperand, operator);
+    }
     updateDisplay();
-})
+    // Reset the operation after displaying the result
+    firstOperand = displayValue;
+    operator = null;
+    // Don't reset displayValue to empty string
+    // displayValue = '';
+});
 
 const clearButton = document.querySelector(".clear");
 
@@ -80,6 +102,21 @@ clearButton.addEventListener('click', () => {
 displayValue = '0';
 updateDisplay()
 })
+
+const dotButton = document.querySelector(".dot");
+
+dotButton.addEventListener('click', () => {
+    if (displayValue === '0') {
+        displayValue = '.'
+    } else {
+        displayValue += '.'; 
+    }
+updateDisplay()
+})
+
+
+
+
 
 
     
