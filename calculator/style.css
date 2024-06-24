@@ -1,46 +1,63 @@
 body{
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 550px;
+    
 }
 
 .display{
     height: 100px;
-    width: 300px;
+    background-color: #353839;
+    color: white;
     display: flex;
     flex-direction: row;
     align-items: end;
     justify-content: flex-end;
-    border: solid black 1px;
     border-radius: 5px;
     font-size: 40px;
+    padding: 5px;
 }
+
+
 
 .numpad{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+   
+}
+
+.numpadplusclear{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.clear{
+    height: 240px;
+    background-color: rgb(228, 146, 59);
 }
 
 .operations{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 4px;
 }
 
 button{
-padding: 31px;  
+width: 75px;
+height: 60px;
+background-color: white;
+font-size: larger;
+border: solid black 0.5px;
 }
 
 .calculator-body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
     width: 300px;
     height: 400px;
-    border: solid black 5px;
     border-radius: 5px;
+    border: solid black 1px;
 }
