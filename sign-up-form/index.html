@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-Up Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="section">
+
+    
+  <div class="section1">
+  <div class="image-container">
+  <div><img src="./images/background.jpg" alt="dark modern background" class="background-image"></div>
+  <div class="credit">
+  <a href="https://unsplash.com/photos/PuN07cr9ZNs">Photo By Visax on Unsplash</a>
+  </div>
+  <div class="logo-container">
+  <div class="logo"><img src="./images/odin-logo.png" alt="picture of a logo of odin"></div>
+  <div class="overlay-text">PURU</div>
+  </div>
+
+ </div>
+</div>
+
+<div class="section2">
+
+<div class="text-above-form">
+ <p>This is not a real online service! You know you need something like this in your life to
+  help you realize your deepest dreams.
+  <br>Sign up now to get started.
+ <p>You <em>know</em> you want it</p>
+ <p class="lets-do-this"><br><br>Let's do this!</p>
+</div>
+
+<form action="./" method="get">
+<div class="name">
+
+<div class="first-name">    
+<label for="first-name">FIRST NAME</label>
+<input type="text" name="name" id="first-name" required placeholder="John">
+</div>
+
+<div class="last-name">
+<label for="last-name">LAST NAME</label>
+<input type="text" name="name" id="last-name" required placeholder="Cena">
+</div>
+
+</div>
+
+<br><div class="email-no">
+
+<div class="email">
+<label for="user-email">EMAIL</label>
+<input type="email" name="email" id="user-email" required placeholder="johncena@gmail.com">
+</div>
+<div class="phone-number">
+<label for="user-phone-number">PHONE NUMBER</label>
+<input type="tel" name="phone-number" id="user-phone-number" required pattern="[0-9]{10,}" minlength="10" placeholder="XXX-XXX-XXXX">
+</div>
+</div>
+
+<br><div class="password-area">
+<div class="password">
+<label for="user-password">PASSWORD</label>
+<input type="password" name="password" id="user-password" required pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$"
+title="Password must be at least 8 characters long, contain at least one number and one special character (!@#$%^&*)">
+</div>
+<div class="confirm-password">
+<label for="confirm-password">CONFIRM PASSWORD</label>
+<input type="password" name="confirm_password" id="confirm-password" required>
+</div>
+</div>
+
+<div class="submit-form"></div>
+<br><br><button type="submit">Create Account</button>
+<p class="log-in">Already have an account? <a href="">Log in</a></p>
+</form>
+</div>
+
+
+</div>
+</body>
+</html>
